@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 5f; // 플레이어 이동 속도
 
     private Rigidbody2D rigidBody;
 
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal"); // x축 힘 (-1f ~ 1f)
         float moveY = Input.GetAxis("Vertical"); // y축 힘 (-1f ~ 1f)
 
-        rigidBody.velocity = new Vector2(moveX, moveY) * moveSpeed;
+        rigidBody.velocity = new Vector2(moveX, moveY) * moveSpeed; // 플레이어 이동
     }
 
     void Update() // 매 프레임마다 호출됨 (주기가 일정치 않음)
