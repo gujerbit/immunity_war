@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f; // 플레이어 이동 속도
-    public Bullet bullet; // 총알
+    public GameObject prefab; // 총알 Prefab
 
     private Rigidbody2D rigidBody;
 
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         // Input.mousePosition은 screen 좌표이기 때문에 월드 좌표로 변환해주어야함
         Vector2 targetVector = Camera.main.ScreenToWorldPoint(Input.mousePosition) - gameObject.transform.position;
 
-        bullet = Instantiate(bullet, gameObject.transform.position, Quaternion.identity); // 나의 좌표(위치, 회전값)에서 총알 생성
-        bullet.SetDirection(targetVector); // Bullet에 있는 SetDirection 함수 실행
+        GameObject bullet = Instantiate(prefab, gameObject.transform.position, Quaternion.identity); // 나의 좌표(위치, 회전값)에서 총알 생성
+        bullet.GetComponent<Bullet>().SetDirection(targetVector); // Bullet에 있는 SetDirection 함수 실행
     }
 }

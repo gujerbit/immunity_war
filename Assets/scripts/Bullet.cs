@@ -38,6 +38,7 @@ public class Bullet : MonoBehaviour
     {
         yield return new WaitForSeconds(5); // 5초 뒤 아래 코드 실행
 
-        Destroy(gameObject); // 자기 자신 삭제
+        //gameObject.SetActive(false); // 자기 자신 비활성화
+        Destroy(gameObject);
     }
 }
