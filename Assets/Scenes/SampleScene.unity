@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  bullet: {fileID: 4180713196213585547, guid: 795ebf0afa406a342b37819a0a9a2040, type: 3}
+  prefab: {fileID: 0}
 --- !u!212 &1735198328
 SpriteRenderer:
   m_ObjectHideFlags: 0
